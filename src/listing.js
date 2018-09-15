@@ -1,6 +1,6 @@
 import React from 'react';
 import './listing.css';
-import jobDesc from './dummydata';
+//import jobDesc from './dummydata';
 
 export class Listing extends React.Component {
   render() {

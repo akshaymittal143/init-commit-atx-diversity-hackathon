@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Listing } from './listing';
+import { NewUser } from './newUser';
 
 class App extends Component {
   render() {
@@ -16,8 +17,7 @@ class App extends Component {
         </p>
 
         <Listing />
-
-        {/* {end for loop} */}
+        <NewUser />
       </div>
     );
   }

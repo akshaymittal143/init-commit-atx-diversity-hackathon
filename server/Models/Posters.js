@@ -8,4 +8,4 @@ let PosterSchema = new mongoose.Schema({
 });
  
 
-module.exports = mongoose.model("User", PosterSchema);
+module.exports = mongoose.model("Poster", PosterSchema);

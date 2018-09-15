@@ -1,4 +1,5 @@
 import React from 'react';
+import './newUser.css';
 
 export class NewUser extends React.Component {
   constructor(props) {
@@ -13,12 +14,12 @@ export class NewUser extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('redirect to a new user page');
+    alert('redirect to a profile');
   }
 
   render() {
     return (
-      <div>
+      <div className="newUser">
         <h2>Create a new developer account</h2>
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -44,7 +45,27 @@ export class NewUser extends React.Component {
           <br />
 
           <label>
-            {' '}
+            Username
+            <input
+              name="lastName"
+              type="text"
+              onChange={this.handleInputChange}
+              required
+            />
+          </label>
+          <br />
+
+          <label>
+            Email
+            <input
+              name="email"
+              type="email"
+              onChange={this.handleInputChange}
+              required
+            />
+          </label>
+          <br />
+          <label>
             Personal Website
             <input
               name="personalWebsite"
@@ -56,7 +77,6 @@ export class NewUser extends React.Component {
           <br />
 
           <label>
-            {' '}
             Github
             <input
               name="github"
@@ -68,7 +88,6 @@ export class NewUser extends React.Component {
           <br />
 
           <label>
-            {' '}
             Code Sample 1
             <input
               name="codeSample"
@@ -80,7 +99,6 @@ export class NewUser extends React.Component {
           <br />
 
           <label>
-            {' '}
             Code Sample 2
             <input
               name="codeSample"
@@ -92,7 +110,6 @@ export class NewUser extends React.Component {
           <br />
 
           <label>
-            {' '}
             Code Sample 3
             <input
               name="codeSample"

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Listing } from './listing';
 import { NewUser } from './newUser';
+import Login from './login';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
 
         <Listing />
         <NewUser />
+        <Login />
       </div>
     );
   }

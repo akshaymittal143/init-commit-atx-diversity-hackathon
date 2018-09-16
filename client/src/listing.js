@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './listing.css';
 import jobDesc from './dummydata';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 export default class Listing extends Component {
   render() {
@@ -11,13 +11,26 @@ export default class Listing extends Component {
         </div>
         {jobDesc.map((job, i) => {
           return (
-            <div key={i}>
-              <h4 className="title">{job.title}</h4>
-              <h4 className="company"> {job.organization}</h4>
-              <div className="user"> {job.poster}</div>
-              <p>{job.description}</p>
-              <button>Apply</button>
-            </div>
+            <Grid>
+              <Row className="show-grid">
+                <div key={i} className="jobListing">
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xs={6} md={4} />'}</code> */}
+                    <span className="title">{job.title}</span>
+                    <span className="company"> {job.organization}</span>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xs={6} md={4} />'}</code> */}
+                    <span className="user"> {job.poster}</span>
+                    <span className="desc">{job.description}</span>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xsHidden md={4} />'}</code> */}
+                    <button>Apply</button>
+                  </Col>
+                </div>
+              </Row>
+            </Grid>
           );
         })}
       </div>

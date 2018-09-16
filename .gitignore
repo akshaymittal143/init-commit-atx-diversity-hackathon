@@ -5,3 +5,6 @@ static/app.bundle.js.map
 static/vendor.bundle.js.map
 dist
 static/config.js
+
+
+.DS_Store

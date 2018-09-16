@@ -3,6 +3,7 @@ import './listing.css';
 // import jobDesc from '../dummydata';
 import { fetchPosters } from '../actions';
 import { connect } from 'react-redux';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class Listing extends Component {
   componentDidMount() {
@@ -19,13 +20,13 @@ class Listing extends Component {
       <div className="main">
         {this.props.posters.map((job, i) => {
           return (
-            <Grid>
+            <Grid key={i}>
               <Row className="show-grid">
-                <div key={i} className="jobListing">
+                <div className="jobListing">
                   <Col xs={6} md={4}>
                     {/* <code>{'<Col xs={6} md={4} />'}</code> */}
-                    <span className="title">{job.project}</span>
-                    <span className="company"> {job.name}</span>
+                    <span className="title">{job.title}</span>
+                    <span className="company"> {job.organization}</span>
                   </Col>
                   <Col xs={6} md={4}>
                     {/* <code>{'<Col xs={6} md={4} />'}</code> */}

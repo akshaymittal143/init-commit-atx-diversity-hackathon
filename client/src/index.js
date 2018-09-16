@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Listing from './listing.js';
-import registerServiceWorker from './registerServiceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {
@@ -10,4 +10,3 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();

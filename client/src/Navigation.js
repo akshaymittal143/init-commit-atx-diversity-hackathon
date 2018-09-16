@@ -11,7 +11,7 @@ export default class Navigation extends Component {
           </a>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#">
+              <a class="nav-item nav-link active">
                 Businesses
                 <span class="sr-only">(current)</span>
               </a>

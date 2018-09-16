@@ -1,0 +1,51 @@
+footer {
+  background-color: #2f363b;
+  padding: 20px;
+}
+footer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  text-align: left;
+}
+footer p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+  text-align: left;
+  line-height: 15px;
+}
+footer form {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+footer .copyright {
+  font-size: 12px;
+}
+.fa {
+  padding: 12px;
+  font-size: 27px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}

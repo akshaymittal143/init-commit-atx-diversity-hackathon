@@ -6,4 +6,5 @@ static/vendor.bundle.js.map
 dist
 static/config.js
 
-.vscode 
+.vscode
+.DS_Store

@@ -1,0 +1,58 @@
+import React, { Component } from 'react';
+import './listing.css';
+// import jobDesc from '../dummydata';
+import { fetchPosters } from '../actions';
+import { connect } from 'react-redux';
+
+class Listing extends Component {
+  componentDidMount() {
+    this.props.fetchPosters();
+  }
+
+  render() {
+    console.log(this.props.posters);
+    if (!this.props.posters.length) {
+      return <div>Loading</div>;
+    }
+
+    return (
+      <div className="main">
+        {this.props.posters.map((job, i) => {
+          return (
+            <Grid>
+              <Row className="show-grid">
+                <div key={i} className="jobListing">
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xs={6} md={4} />'}</code> */}
+                    <span className="title">{job.project}</span>
+                    <span className="company"> {job.name}</span>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xs={6} md={4} />'}</code> */}
+                    <span className="user"> {job.rating}</span>
+                    <span className="desc">{job.description}</span>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xsHidden md={4} />'}</code> */}
+                    <button>Apply</button>
+                  </Col>
+                </div>
+              </Row>
+            </Grid>
+          );
+        })}
+      </div>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    posters: state.posts
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { fetchPosters }
+)(Listing);

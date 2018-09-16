@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Listing from './listing.js';
 import Navigation from './Navigation';
-import User from './User';
 import Footer from './footer.js';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -15,9 +14,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Listing />
         <Navigation />
-        <User />
+        <Listing />
         <Footer />
       </div>
     );

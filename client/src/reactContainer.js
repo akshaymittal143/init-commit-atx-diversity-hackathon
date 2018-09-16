@@ -9,7 +9,7 @@ class ReactContainer extends React.Component {
     return (
       <Fragment>
         <Route exact path="/" component={Listing} />
-        <Route exact path="/user" component={User} />
+        {/* <Route exact path="/user" component={User} /> */}
       </Fragment>
     );
   }

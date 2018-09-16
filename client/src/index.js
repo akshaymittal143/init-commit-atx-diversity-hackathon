@@ -11,7 +11,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import './listing.css';
 import ReactContainer from './reactContainer';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <Router>

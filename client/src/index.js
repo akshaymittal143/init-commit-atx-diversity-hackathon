@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Listing from './listing.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Grid, Row, Col } from 'react-bootstrap';
+
+import './listing.css';
 
 class App extends Component {
   render() {

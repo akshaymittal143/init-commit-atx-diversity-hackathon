@@ -35,7 +35,7 @@ app.get('/posters', (req, res) => {
 
 app.post('/posters/new', (req, res) => {
     let posterObject = req.body;
-    let newPoster = {name: posterObject.name, project: posterObject.project, rating: posterObject.rating, picture: posterObject.picture};
+    let newPoster = {organization: posterObject.organization, title: posterObject.title, rating: posterObject.rating, picture: posterObject.picture, tags: posterObject.tags, description: posterObject.description};
     Posters.create(newPoster, (err, created) => {
         if(err) {
             console.log(err);

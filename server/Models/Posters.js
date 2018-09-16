@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 let PosterSchema = new mongoose.Schema({
-    name: String,
-    project: String,
-    rating: String,
-    picture: String
+    title: String,
+    organization: String,
+    tags: [String],
+    description: String
 });
  
 

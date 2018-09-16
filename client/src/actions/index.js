@@ -6,7 +6,15 @@ export const CREATE_POST = 'create-post';
 const ROOT_URL = 'http://initcommit-jdemieville.c9users.io';
 
 export function fetchPosters() {
-  const request = axios.get(`${ROOT_URL}/posters`);
+  const request = axios
+    .get(`${ROOT_URL}/posters`)
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      console.log(err); // Handle the error here. E.g. use this.setState() to display an error msg.
+    });
+
   return {
     type: FETCH_POSTS,
     payload: request

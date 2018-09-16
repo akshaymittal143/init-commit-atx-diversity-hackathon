@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './listing.css';
-import jobDesc from '../dummydata';
+// import jobDesc from '../dummydata';
 import { fetchPosters } from '../actions';
 import { connect } from 'react-redux';
 
@@ -10,19 +10,35 @@ class Listing extends Component {
   }
 
   render() {
+    console.log(this.props.posters);
+    if (!this.props.posters.length) {
+      return <div>Loading</div>;
+    }
+
     return (
       <div className="main">
-        <div className="heading">{this.props.posters[0]}</div>
-
-        {jobDesc.map((job, i) => {
+        {this.props.posters.map((job, i) => {
           return (
-            <div key={i}>
-              <h4 className="title">{job.title}</h4>
-              <h4 className="company"> {job.organization}</h4>
-              <div className="user"> {job.poster}</div>
-              <p>{job.description}</p>
-              <button>Apply</button>
-            </div>
+            <Grid>
+              <Row className="show-grid">
+                <div key={i} className="jobListing">
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xs={6} md={4} />'}</code> */}
+                    <span className="title">{job.project}</span>
+                    <span className="company"> {job.name}</span>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xs={6} md={4} />'}</code> */}
+                    <span className="user"> {job.rating}</span>
+                    <span className="desc">{job.description}</span>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    {/* <code>{'<Col xsHidden md={4} />'}</code> */}
+                    <button>Apply</button>
+                  </Col>
+                </div>
+              </Row>
+            </Grid>
           );
         })}
       </div>
@@ -31,7 +47,9 @@ class Listing extends Component {
 }
 
 function mapStateToProps(state) {
-  return { posters: state.posts };
+  return {
+    posters: state.posts
+  };
 }
 
 export default connect(

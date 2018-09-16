@@ -1,0 +1,21 @@
+nav.navbar {
+  background-color: #599bc9;
+}
+#navbar a.navbar-brand {
+  color: white;
+}
+nav .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+nav .nav-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+nav form {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
